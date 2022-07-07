@@ -36,7 +36,16 @@ export default function Home({ allPostsData }) {
         <p className="title">
           &#128264; Read{" "}
           <Link href="/posts/first-post">
-            <a>this the first post page!</a>
+            <a>the first post page!</a>
+          </Link>
+        </p>
+      </section>
+
+      <section>
+        <p className="title">
+          &#128264; See{" "}
+          <Link href="/api/hello">
+            <a>the first api!</a>
           </Link>
         </p>
       </section>
