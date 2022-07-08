@@ -1,8 +1,8 @@
-import Layout from "../../components/layout";
-import { getAllPostIds, getPostData } from "../../lib/posts";
-import Head from "next/head";
-import Date from "../../components/date";
-import utilStyles from "../../styles/utils.module.css";
+import Layout from "../../components/layout"
+import { getAllPostIds, getPostData } from "../../lib/posts"
+import Head from "next/head"
+import Date from "../../components/date"
+import utilStyles from "../../styles/utils.module.css"
 
 //getStaticPaths which returns an array of possible values of id
 export async function getStaticPaths() {
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   return {
     paths,
     fallback: false,
-  };
+  }
 }
 
 //getStaticProps which fetches necessary data for the post with id
@@ -20,7 +20,7 @@ export async function getStaticProps({ params }) {
     props: {
       postData,
     },
-  };
+  }
 }
 
 //react component to render this page
@@ -48,5 +48,5 @@ export default function Post({ postData }) {
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>
-  );
+  )
 }
