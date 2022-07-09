@@ -6,7 +6,7 @@ import utilStyles from "../../styles/utils.module.css"
 
 //getStaticPaths which returns an array of possible values of id
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const paths = getAllPostIds()
   return {
     paths,
     fallback: false,
